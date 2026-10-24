@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SkinSakhi | AI Skin Health</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="extra.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+
+<aside class="sidebar">
+
+    <div class="brand">
+
+        <div class="brand-symbol">S</div>
+
+        <div>
+            <h2>Skin<span>Sakhi</span></h2>
+            <small>Healthy Skin • Confident You</small>
+        </div>
+
+    </div>
+
+
+    <nav class="side-nav">
+
+        <a href="#home" class="active">
+            <span>⌂</span>
+            Home
+        </a>
+
+        <a href="#analysis">
+            <span>✦</span>
+            AI Analysis
+        </a>
+
+        <a href="#services">
+            <span>▦</span>
+            Services
+        </a>
+
+        <a href="#care">
+            <span>✚</span>
+            Find Care
+        </a>
+
+        <a href="#trekking">
+            <span>⌁</span>
+            Trekking
+        </a>
+
+        <a href="#journal">
+            <span>▤</span>
+            Journal
+        </a>
+
+        <a href="#">
+            <span>♙</span>
+            Profile
+        </a>
+
+    </nav>
+
+
+    <div class="language-box">
+
+        <p>◎ &nbsp; Language</p>
+
+        <select id="languageSelect">
+            <option value="en">English</option>
+            <option value="hi">हिंदी</option>
+            <option value="pa">ਪੰਜਾਬੀ</option>
+        </select>
+
+    </div>
+
+
+    <div class="sidebar-note">
+        <span>Good Skin</span>
+        <span>Good Mood</span>
+        <b>♥</b>
+    </div>
+
+</aside>
+
+
+
+
+<main class="main">
+
+    <!-- TOP BAR -->
+
+    <header class="topbar">
+
+        <div></div>
+
+        <div class="user-area">
+
+            <button class="notification" type="button" aria-label="My appointments">
+                ♧
+            </button>
+
+            <div class="user-avatar">
+                U
+            </div>
+
+            <div>
+                <small>Welcome</small>
+                <strong>User</strong>
+            </div>
+
+            <span>⌄</span>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-text">
+
+            <div class="tag">
+                ✨ AI-Powered Skin Wellness
+            </div>
+
+            <h1>
+                Understand Your<br>
+                <span>Skin With AI.</span>
+            </h1>
+
+            <p>
+                Get a detailed skin analysis and personalized care
+                with expert guidance, all in one place.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button
+                    class="pink-btn"
+                    onclick="goToAnalysis()"
+                >
+                    ✦ &nbsp; Analyze My Skin →
+                </button>
+
+                <button
+                    class="outline-btn"
+                    onclick="goToServices()"
+                >
+                    Explore Services
+                </button>
+
+            </div>
+
+
+            <div class="stats">
+
+                <div>
+                    <b>♧</b>
+                    <span>
+                        <strong>AI</strong>
+                        Powered
+                    </span>
+                </div>
+
+                <div>
+                    <b>◷</b>
+                    <span>
+                        <strong>24/7</strong>
+                        Accessible
+                    </span>
+                </div>
+
+                <div>
+                    <b>文</b>
+                    <span>
+                        <strong>3+</strong>
+                        Languages
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        
+
+        <div class="hero-brand">
+
+            <div class="face-circle">
+
+                <div class="face">
+                    ♡
+                </div>
+
+                <div class="leaf leaf1">❧</div>
+                <div class="leaf leaf2">❧</div>
+
+            </div>
+
+            <div class="big-logo">
+                <span>Skin</span><b>Sakhi</b>
+            </div>
+
+            <p>
+                Healthy Skin <b>♥</b> Confident You
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="analysis-area" id="analysis">
+
+        <!-- UPLOAD -->
+
+        <div class="card upload-card">
+
+            <div class="section-tag">
+                AI SKIN ANALYSIS
+            </div>
+
+            <h2>Scan Your Skin</h2>
+
+            <p>
+                Upload a clear photo and let AI detect
+                your skin concerns.
+            </p>
+
+
+            <div
+                class="upload-box"
+                onclick="document.getElementById('imageInput').click()"
+            >
+
+                <div class="camera-icon">
+                    ♧
+                </div>
+
+                <h3>Upload Skin Photo</h3>
+
+                <span>
+                    Clear photo for better results
+                </span>
+
+                <button type="button">
+                    Choose Photo
+                </button>
+
+            </div>
+
+
+            <input
+                type="file"
+                id="imageInput"
+                accept="image/*"
+                hidden
+            >
+
+
+            <div
+                class="image-preview"
+                id="imagePreview"
+            >
+
+                <span>
+                    No image selected
+                </span>
+
+            </div>
+
+
+            <details class="symptom-box">
+                <summary>
+                    ⚠ &nbsp; Any warning signs? <small>(optional, used for urgency)</small>
+                </summary>
+
+                <div class="symptom-grid">
+                    <label><input type="checkbox" value="bleeding_sore"> A sore that bleeds or won’t heal</label>
+                    <label><input type="checkbox" value="changing_mole"> A mole changing size, shape or colour</label>
+                    <label><input type="checkbox" value="rapid_growth"> A lump or spot growing quickly</label>
+                    <label><input type="checkbox" value="blisters"> Painful blisters or peeling skin</label>
+                    <label><input type="checkbox" value="infection"> Pus, warmth or spreading redness</label>
+                    <label><input type="checkbox" value="severe_pain"> Severe or worsening pain</label>
+                    <label><input type="checkbox" value="fever_rash"> Fever with a fast-spreading rash</label>
+                    <label><input type="checkbox" value="eye"> Eye involvement or vision changes</label>
+                    <label><input type="checkbox" value="face_swelling"> Swelling of face, lips or tongue</label>
+                    <label><input type="checkbox" value="breathing"> Trouble breathing or dizziness</label>
+                </div>
+
+                <p class="symptom-note">
+                    If you are having a medical emergency, call your local emergency number now.
+                    This checklist only helps SkinSakhi point you to the right level of care.
+                </p>
+            </details>
+
+
+            <button
+                class="analyze-button"
+                onclick="analyzeSkin()"
+            >
+                ✦ &nbsp; Analyze Skin
+            </button>
+
+        </div>
+
+
+        <!-- RESULT -->
+
+        <div class="card result-card">
+
+            <div class="result-title">
+
+                <span>
+                    ◇ &nbsp; AI Analysis Result
+                </span>
+
+                <small>
+                    ● Ready
+                </small>
+
+            </div>
+
+
+            <div id="result">
+
+                <div class="result-empty">
+
+                    <div class="result-icon">
+                        ♧
+                    </div>
+
+                    <h3>
+                        Your result will appear here
+                    </h3>
+
+                    <p>
+                        Upload a photo to begin your
+                        SkinSakhi analysis.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        
+
+        <div
+            class="card services-card"
+            id="services"
+        >
+
+            <div class="section-tag">
+                OUR SERVICES
+            </div>
+
+            <h2>
+                Complete Skin Care,
+                All in One Place
+            </h2>
+
+            <p>
+                From AI analysis to professional consultation,
+                SkinSakhi is your complete skin wellness companion.
+            </p>
+
+
+            <div class="service-grid">
+
+                <div class="service">
+                    <i>♧</i>
+                    <h3>Personalized<br>Recommendations</h3>
+                    <p>
+                        Get custom skincare suggestions.
+                    </p>
+                    <button onclick="serviceMessage('Personalized Recommendations')">
+                        Explore →
+                    </button>
+                </div>
+
+
+                <div class="service">
+                    <i>♧</i>
+                    <h3>Product<br>Recommendations</h3>
+                    <p>
+                        Discover products for your skin needs.
+                    </p>
+                    <button onclick="serviceMessage('Product Recommendations')">
+                        View Products →
+                    </button>
+                </div>
+
+
+                <div class="service">
+                    <i>♙</i>
+                    <h3>Doctor & Hospital<br>Appointment</h3>
+                    <p>
+                        Find nearby care and book a consultation.
+                    </p>
+                    <button onclick="goToCare('dermatologist')">
+                        Find Care →
+                    </button>
+                </div>
+
+
+                <div class="service">
+                    <i>⌂</i>
+                    <h3>Home<br>Appointment</h3>
+                    <p>
+                        Request home-based services.
+                    </p>
+                    <button onclick="serviceMessage('Home Appointment')">
+                        Book →
+                    </button>
+                </div>
+
+
+                <div class="service">
+                    <i>❀</i>
+                    <h3>Beauty & Skin Clinic</h3>
+                    <p>
+                        Explore professional skin services.
+                    </p>
+                    <button onclick="serviceMessage('Beauty & Skin Clinic')">
+                        Explore →
+                    </button>
+                </div>
+
+
+                <div class="service quote-card">
+
+                    <h3>
+                        Healthy Skin<br>
+                        <em>is a Journey,</em><br>
+                        not a Destination
+                    </h3>
+
+                    <span>♥</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    
+
+    <section class="care-section" id="care">
+
+        <div class="care-head">
+
+            <div>
+                <span class="section-tag">FIND CARE</span>
+                <h2>Dermatologists &amp; Hospitals Near You</h2>
+                <p>
+                    Find a skin specialist for a routine concern, or the nearest
+                    hospital when something needs urgent attention.
+                </p>
+            </div>
+
+            <div class="care-emergency-card">
+                <b>Medical emergency?</b>
+                <p>Do not wait for an online result.</p>
+                <button class="dark-btn" onclick="openEmergency()">
+                    ☎ Emergency numbers →
+                </button>
+            </div>
+
+        </div>
+
+
+        <div class="care-controls">
+
+            <div class="care-tabs" id="careTabs">
+                <button type="button" class="on" data-kind="dermatologist">Dermatologist</button>
+                <button type="button" data-kind="hospital">Hospital / Emergency</button>
+                <button type="button" data-kind="clinic">Skin clinic</button>
+            </div>
+
+            <div class="care-search">
+                <input
+                    id="careLocation"
+                    type="text"
+                    placeholder="Enter a city or area, e.g. Bengaluru"
+                    maxlength="120"
+                    autocomplete="address-level2"
+                >
+                <button class="pink-btn" type="button" onclick="searchCare()">
+                    Search
+                </button>
+                <button class="outline-btn" type="button" onclick="useMyLocation()">
+                    📍 Use my location
+                </button>
+            </div>
+
+            <label class="care-radius">
+                Within
+                <select id="careRadius">
+                    <option value="5">5 km</option>
+                    <option value="10" selected>10 km</option>
+                    <option value="25">25 km</option>
+                    <option value="50">50 km</option>
+                </select>
+            </label>
+
+        </div>
+
+        <div id="careEmergency" class="care-emergency" hidden></div>
+
+        <div id="careResults" class="care-results">
+            <p class="care-empty">
+                Share your location or search a city to find dermatology clinics,
+                skin clinics and hospitals. Results come from OpenStreetMap, so
+                coverage varies by area.
+            </p>
+        </div>
+
+    </section>
+
+
+    
+
+    <section
+        class="trek-section"
+        id="trekking"
+    >
+
+        <div class="trek-info">
+
+            <span class="section-tag">
+                TREKKING SYSTEM
+            </span>
+
+            <h2>
+                Trek Smart.<br>
+                Protect Your Skin.
+            </h2>
+
+            <p>
+                Planning a trek? Get weather-based skincare tips,
+                UV protection guidance and a complete trekking
+                checklist.
+            </p>
+
+            <button
+                class="dark-btn"
+                onclick="startTrek()"
+            >
+                Start Trek Planner →
+            </button>
+
+        </div>
+
+
+        <div class="trek-checklist">
+
+            <h3>
+                ⛰ Trek Skin Checklist
+            </h3>
+
+            <label>
+                <input type="checkbox">
+                Sunscreen
+            </label>
+
+            <label>
+                <input type="checkbox">
+                Water / Hydration
+            </label>
+
+            <label>
+                <input type="checkbox">
+                Sun Protection
+            </label>
+
+            <label>
+                <input type="checkbox">
+                Moisturizer
+            </label>
+
+            <label>
+                <input type="checkbox">
+                Lip Protection
+            </label>
+
+
+            <div class="trek-tip">
+                ☀️ Check weather and UV conditions
+                before your trek.
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <section
+        class="journal"
+        id="journal"
+    >
+
+        <div>
+
+            <span class="section-tag">
+                SKIN JOURNAL
+            </span>
+
+            <h2>
+                Track Your Skin Journey
+            </h2>
+
+            <p>
+                Keep your skin analysis history and observe
+                your progress over time.
+            </p>
+
+            <button
+                class="pink-btn"
+                onclick="serviceMessage('Skin Journal')"
+            >
+                View Journal →
+            </button>
+
+        </div>
+
+
+        <div class="journal-items">
+
+            <div>
+                <span>▣</span>
+                <b>Analysis History</b>
+                <small>
+                    View past skin scans
+                </small>
+            </div>
+
+            <div>
+                <span>⌁</span>
+                <b>Progress Tracking</b>
+                <small>
+                    Compare your skin journey
+                </small>
+            </div>
+
+            <div>
+                <span>□</span>
+                <b>Daily Notes</b>
+                <small>
+                    Add personal notes
+                </small>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="why">
+
+        <div class="why-message">
+
+            ♥ &nbsp; Small steps today<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;for healthier skin tomorrow
+
+        </div>
+
+
+        <div class="why-content">
+
+            <h3>Why SkinSakhi?</h3>
+
+            <div class="why-grid">
+
+                <span>
+                    ✿
+                    <b>AI Powered<br>Technology</b>
+                </span>
+
+                <span>
+                    ♡
+                    <b>Personalized<br>Care</b>
+                </span>
+
+                <span>
+                    ♙
+                    <b>Expert<br>Consultation</b>
+                </span>
+
+                <span>
+                    ▦
+                    <b>All-in-One<br>Platform</b>
+                </span>
+
+                <span>
+                    ◎
+                    <b>Multi-Language<br>Support</b>
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <footer>
+
+        <div class="footer-brand">
+            <strong>Skin<span>Sakhi</span></strong>
+            <small>
+                Healthy Skin • Confident You
+            </small>
+        </div>
+
+        <div class="footer-links">
+
+            <a href="#home">Home</a>
+            <a href="#analysis">AI Analysis</a>
+            <a href="#services">Services</a>
+            <a href="#care">Find Care</a>
+            <a href="#trekking">Trekking</a>
+            <a href="#journal">Journal</a>
+            <a href="#">Contact</a>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 SkinSakhi. All rights reserved.
+        </div>
+
+    </footer>
+
+</main>
+
+<div id="toast"></div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

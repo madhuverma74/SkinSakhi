@@ -1,0 +1,10 @@
+node_modules/
+.env
+data/
+
+# Optional notebook models and Python service artifacts
+ml-service/models/*.keras
+ml-service/models/*.h5
+ml-service/.venv/
+__pycache__/
+*.pyc

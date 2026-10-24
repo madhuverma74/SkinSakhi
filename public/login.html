@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | SkinSakhi</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+
+    <style>
+        body {
+            min-height: 100vh;
+            background:
+                radial-gradient(circle at 10% 20%, #f8d8e1, transparent 30%),
+                radial-gradient(circle at 90% 80%, #f7d9df, transparent 30%),
+                #fff8f6;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .auth-wrapper {
+            width: 900px;
+            max-width: 92%;
+            min-height: 560px;
+
+            background: white;
+            border: 1px solid #f0dddd;
+            border-radius: 25px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            overflow: hidden;
+
+            box-shadow: 0 15px 50px rgba(100, 40, 50, .10);
+        }
+
+        .auth-left {
+            background: linear-gradient(
+                145deg,
+                #f9dce3,
+                #fff1ee
+            );
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+            padding: 40px;
+        }
+
+        .auth-logo {
+            font-family: "Playfair Display", serif;
+            font-size: 48px;
+            color: #3d2926;
+        }
+
+        .auth-logo span {
+            color: #cf3e6c;
+        }
+
+        .auth-left p {
+            color: #715e63;
+            margin-top: 10px;
+            line-height: 1.6;
+        }
+
+        .heart {
+            font-size: 45px;
+            color: #d43d6b;
+            margin-bottom: 15px;
+        }
+
+        .auth-right {
+            padding: 55px 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .auth-right h1 {
+            font-family: "Playfair Display", serif;
+            font-size: 34px;
+            margin-bottom: 8px;
+        }
+
+        .auth-subtitle {
+            color: #888;
+            font-size: 13px;
+            margin-bottom: 28px;
+        }
+
+        .input-group {
+            margin-bottom: 16px;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 7px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 13px 15px;
+            border: 1px solid #e4d4d7;
+            border-radius: 10px;
+            outline: none;
+            font-size: 13px;
+        }
+
+        .input-group input:focus {
+            border-color: #d54570;
+            box-shadow: 0 0 0 3px #fce5eb;
+        }
+
+        .auth-button {
+            width: 100%;
+            padding: 13px;
+            border: none;
+            border-radius: 22px;
+            background: #cf3b68;
+            color: white;
+            font-weight: 600;
+            margin-top: 8px;
+            cursor: pointer;
+        }
+
+        .auth-button:hover {
+            background: #b72e57;
+        }
+
+        .switch-auth {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #777;
+        }
+
+        .switch-auth a {
+            color: #c93160;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .back-home {
+            margin-top: 18px;
+            text-align: center;
+        }
+
+        .back-home a {
+            color: #777;
+            text-decoration: none;
+            font-size: 11px;
+        }
+
+        #loginMessage {
+            margin-top: 12px;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        @media(max-width:700px) {
+
+            .auth-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .auth-left {
+                min-height: 200px;
+                padding: 25px;
+            }
+
+            .auth-logo {
+                font-size: 35px;
+            }
+
+            .auth-right {
+                padding: 35px 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="auth-wrapper">
+
+    <div class="auth-left">
+
+        <div>
+
+            <div class="heart">♥</div>
+
+            <div class="auth-logo">
+                Skin<span>Sakhi</span>
+            </div>
+
+            <p>
+                Healthy Skin<br>
+                <strong>Confident You</strong>
+            </p>
+
+            <p>
+                Your AI-powered skin wellness companion.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="auth-right">
+
+        <h1>Welcome Back</h1>
+
+        <p class="auth-subtitle">
+            Login to continue your SkinSakhi journey.
+        </p>
+
+
+        <form id="loginForm">
+
+            <div class="input-group">
+
+                <label for="loginEmail">Email Address</label>
+
+                <input
+                    type="email"
+                    id="loginEmail"
+                    placeholder="Enter your email"
+                    required
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label for="loginPassword">Password</label>
+
+                <input
+                    type="password"
+                    id="loginPassword"
+                    placeholder="Enter your password"
+                    required
+                >
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="auth-button"
+            >
+                Login to SkinSakhi →
+            </button>
+
+        </form>
+
+
+        <p id="loginMessage"></p>
+
+
+        <div class="switch-auth">
+
+            Don't have an account?
+
+            <a href="signup.html">
+                Create Account
+            </a>
+
+        </div>
+
+
+        <div class="back-home">
+
+            <a href="index.html">
+                ← Back to SkinSakhi
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="login.js"></script>
+
+</body>
+</html>
